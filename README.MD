@@ -54,12 +54,10 @@ python app.py
 🌐 Step 4: Open in Browser
 Student Login: http://127.0.0.1:5000
 Admin Login: http://127.0.0.1:5000/admin
+
 🔑 Admin Credentials
 Username: admin
 Password: admin123
-🚀 Live Demo (Render Deployment)
-🌍 Steps to Deploy on Render
-Go to https://render.com
 
 Create a new Web Service
 

@@ -44,10 +44,13 @@ Finally, for deployment and development, features like Docker support, CI/CD pip
 🔧 Step 1: Clone the Repository
 git clone https://github.com/Dhanush-ux177/Online-Quiz-System.git
 cd Online-Quiz-System
+
 🐍 Step 2: Install Dependencies
 pip install flask
+
 ▶️ Step 3: Run the Application
 python app.py
+
 🌐 Step 4: Open in Browser
 Student Login: http://127.0.0.1:5000
 Admin Login: http://127.0.0.1:5000/admin
@@ -57,7 +60,9 @@ Password: admin123
 🚀 Live Demo (Render Deployment)
 🌍 Steps to Deploy on Render
 Go to https://render.com
+
 Create a new Web Service
+
 Connect your GitHub repository
 Set the following:
 Build Command:
@@ -82,6 +87,7 @@ Choose quiz (Python / Java / C)
 Answer 10 MCQs
 View score instantly
 Retake quiz anytime
+
 👨‍💼 For Admin:
 Login via /admin
 Add new quiz questions

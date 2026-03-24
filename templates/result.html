@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .result-box {
+            background: white;
+            width: 380px;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .score {
+            font-size: 24px;
+            color: #27ae60;
+            margin: 20px 0;
+        }
+
+        .username {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .actions {
+            margin-top: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .logout {
+            background: #e74c3c;
+        }
+
+        .logout:hover {
+            background: #c0392b;
+        }
+
+        .retry {
+            background: #3498db;
+        }
+
+        .retry:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="result-box">
+    <h1>Quiz Completed 🎉</h1>
+
+    <p class="username">
+        Student: <b>{{ username }}</b>
+    </p>
+
+    <div class="score">
+        Score: {{ score }} / {{ total }}
+    </div>
+
+    <div class="actions">
+        <a class="retry" href="/quiz">Retry Quiz</a>
+        <a class="logout" href="/logout">Logout</a>
+    </div>
+</div>
+
+</body>
+</html>
+

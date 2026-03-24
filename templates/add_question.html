@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Question | Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            background: #e74c3c;
+            padding: 8px 14px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .header a:hover {
+            background: #c0392b;
+        }
+
+        .container {
+            width: 50%;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #27ae60;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #219150;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h3>Add Question</h3>
+    <a href="/admin/dashboard">Back</a>
+</div>
+
+<div class="container">
+    <h2>New Quiz Question</h2>
+
+    <form method="POST">
+    <label>Question</label>
+    <input type="text" name="question" required>
+
+    <label>Option 1</label>
+    <input type="text" name="opt1" required>
+
+    <label>Option 2</label>
+    <input type="text" name="opt2" required>
+
+    <label>Option 3</label>
+    <input type="text" name="opt3" required>
+
+    <label>Option 4</label>
+    <input type="text" name="opt4" required>
+
+    <label>Correct Answer</label>
+    <input type="text" name="answer" required>
+
+    <label>Category</label>
+    <select name="category" required>
+        <option value="">Select language</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="C">C</option>
+    </select>
+
+    <br><br>
+    <button type="submit">Add Question</button>
+</form>
+
+
+    <a class="back" href="/admin/dashboard">← Back to Dashboard</a>
+</div>
+
+</body>
+</html>
+

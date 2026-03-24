@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard | Online Quiz</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h2 {
+            margin: 0;
+        }
+
+        .logout {
+            background: #e74c3c;
+            color: white;
+            padding: 8px 14px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .logout:hover {
+            background: #c0392b;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            flex: 1;
+            min-width: 220px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        .card a {
+            text-decoration: none;
+            background: #3498db;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .card a:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Admin Dashboard</h2>
+    <a class="logout" href="/admin/logout">Logout</a>
+</div>
+
+<div class="container">
+    <div class="cards">
+
+        <div class="card">
+            <h3>Add Questions</h3>
+            <p>Create new quiz questions</p>
+            <a href="/admin/add_question">Add Question</a>
+        </div>
+
+        <div class="card">
+            <h3>View Results</h3>
+            <p>See student quiz results</p>
+            <a href="/admin/results">View Results</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+

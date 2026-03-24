@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .question-box {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        .question-box h3 {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 40px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #219150;
+        }
+
+        .logout {
+            color: white;
+            text-decoration: none;
+            background: #e74c3c;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+
+        .logout:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Online Quiz</h2>
+    <div>
+        Welcome, <b>{{ username }}</b>
+        &nbsp; | &nbsp;
+        <a class="logout" href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <form method="POST">
+
+        {% for q in questions %}
+        <div class="question-box">
+            <h3>{{ loop.index }}. {{ q[1] }}</h3>
+
+            <label>
+                <input type="radio" name="{{ q[0] }}" value="{{ q[2] }}" required>
+                {{ q[2] }}
+            </label>
+
+            <label>
+                <input type="radio" name="{{ q[0] }}" value="{{ q[3] }}">
+                {{ q[3] }}
+            </label>
+
+            <label>
+                <input type="radio" name="{{ q[0] }}" value="{{ q[4] }}">
+                {{ q[4] }}
+            </label>
+
+            <label>
+                <input type="radio" name="{{ q[0] }}" value="{{ q[5] }}">
+                {{ q[5] }}
+            </label>
+        </div>
+        {% endfor %}
+
+        <button class="submit-btn" type="submit">Submit Quiz</button>
+
+    </form>
+</div>
+
+</body>
+</html>
+
